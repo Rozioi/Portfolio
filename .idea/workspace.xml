@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a781da62-f989-44f2-9b8f-53f3e8ead697" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rozioi&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rozioi/freelancers-calendar.git&quot;,
+    &quot;accountId&quot;: &quot;53483bf9-9a62-4d68-8b78-c3973c24747e&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2rdGf6HCf3ifoDwAyL5JeQy9tmy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Programming/Projects/freelancers-calendar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\Programming\\Projects\\freelancers-calendar\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="JavaScript Debug.Debug Application">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a781da62-f989-44f2-9b8f-53f3e8ead697" name="Changes" comment="" />
+      <created>1736881638748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736881638748</updated>
+      <workItem from="1736881639787" duration="611000" />
+      <workItem from="1737305749984" duration="5227000" />
+      <workItem from="1737311610007" duration="1792000" />
+      <workItem from="1737398086448" duration="4933000" />
+      <workItem from="1737430463127" duration="4610000" />
+      <workItem from="1737479657845" duration="6858000" />
+      <workItem from="1737567332016" duration="1718000" />
+      <workItem from="1737602328868" duration="4830000" />
+      <workItem from="1737654500458" duration="3856000" />
+      <workItem from="1737690762182" duration="3905000" />
+      <workItem from="1737830433005" duration="926000" />
+      <workItem from="1737871739816" duration="3105000" />
+      <workItem from="1737878347766" duration="2521000" />
+      <workItem from="1738072671705" duration="627000" />
+      <workItem from="1738207620316" duration="293000" />
+      <workItem from="1738208134114" duration="2429000" />
+      <workItem from="1738210700487" duration="519000" />
+      <workItem from="1738343396973" duration="2992000" />
+      <workItem from="1738607712440" duration="153000" />
+      <workItem from="1738639696541" duration="3327000" />
+      <workItem from="1738693450293" duration="586000" />
+    </task>
+    <task id="LOCAL-00001" summary="refactor: created header and styled it">
+      <option name="closed" value="true" />
+      <created>1737312930906</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737312930906</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactor: created header and styled it">
+      <option name="closed" value="true" />
+      <created>1737313237730</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737313237730</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: create InteractiveContent component and its internal LoanBlock component">
+      <option name="closed" value="true" />
+      <created>1737402412706</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737402412706</updated>
+    </task>
+    <task id="LOCAL-00004" summary="style: add styles for InteractiveContent and LoanBlock components">
+      <option name="closed" value="true" />
+      <created>1737402436010</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737402436010</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor: Added custom input component with styles and integrated it into loanBlock">
+      <option name="closed" value="true" />
+      <created>1737434553460</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737434553460</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: Completed the loanBlock and styled it, then moved on to the next section of the site (OurAdvant.tsx), wrote the styles but still need to fix them.">
+      <option name="closed" value="true" />
+      <created>1737486701638</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737486701638</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: added new component (eastGet.tsx) and styled it">
+      <option name="closed" value="true" />
+      <created>1737607548137</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737607548137</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: updated styles for EasyGet.tsx, added a hand pointing to the second step of the process">
+      <option name="closed" value="true" />
+      <created>1737658835748</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737658835748</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: add new RepayLoan component with basic structure; layout logic and styles are not fully implemented yet">
+      <option name="closed" value="true" />
+      <created>1737694431129</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1737694431129</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: Complete the layout of the Footer component&#10;&#10;- Finalized the Footer component in RepayLoan.&#10;- Added styles for the container and footer.&#10;- Layout is not fully aligned with the design mockup; further adjustments are needed.">
+      <option name="closed" value="true" />
+      <created>1737831315939</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737831315939</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: Add Header component with basic styling">
+      <option name="closed" value="true" />
+      <created>1738211074686</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738211074686</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: Add Header component with basic styling">
+      <option name="closed" value="true" />
+      <created>1738211097055</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738211097055</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: Add Header component with basic styling">
+      <option name="closed" value="true" />
+      <created>1738211185469</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738211185469</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update website design and select a new layout; started styling the header">
+      <option name="closed" value="true" />
+      <created>1738346719023</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738346719023</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update website design and select a new layout; started styling the header">
+      <option name="closed" value="true" />
+      <created>1738607808749</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738607808749</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update website design and select a new layout; started styling the header">
+      <option name="closed" value="true" />
+      <created>1738642661178</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738642661178</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="refactor: created header and styled it" />
+    <MESSAGE value="feat: create InteractiveContent component and its internal LoanBlock component" />
+    <MESSAGE value="style: add styles for InteractiveContent and LoanBlock components" />
+    <MESSAGE value="feat: create InteractiveContent component and its internal LoanBlock component&#10;style: add styles for InteractiveContent and LoanBlock components" />
+    <MESSAGE value="refactor: Added custom input component with styles and integrated it into loanBlock" />
+    <MESSAGE value="refactor: Completed the loanBlock and styled it, then moved on to the next section of the site (OurAdvant.tsx), wrote the styles but still need to fix them." />
+    <MESSAGE value="feat: added new component (eastGet.tsx) and styled it" />
+    <MESSAGE value="feat: updated styles for EasyGet.tsx, added a hand pointing to the second step of the process" />
+    <MESSAGE value="feat: add new RepayLoan component with basic structure; layout logic and styles are not fully implemented yet" />
+    <MESSAGE value="feat: Complete the layout of the Footer component&#10;&#10;- Finalized the Footer component in RepayLoan.&#10;- Added styles for the container and footer.&#10;- Layout is not fully aligned with the design mockup; further adjustments are needed." />
+    <MESSAGE value="feat: Add Header component with basic styling" />
+    <MESSAGE value="Update website design and select a new layout; started styling the header" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update website design and select a new layout; started styling the header" />
+  </component>
+</project>

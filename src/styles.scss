@@ -1,0 +1,91 @@
+body {
+    background-color: #0c0c0c;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  
+    li {
+      color: #bbb;
+      cursor: pointer;
+  
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .content {
+    margin-top: 50px;
+    
+    h1 {
+      font-size: 36px;
+      color: #66aaff;
+    }
+  
+    p {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #eee;
+    }
+  
+    .buttons {
+      display: flex;
+      gap: 20px;
+      
+      .project-btn, .contact-btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      
+      .project-btn {
+        background-color: #5c5cff;
+        color: white;
+  
+        &:hover {
+          background-color: #4a4ae0;
+        }
+      }
+      
+      .contact-btn {
+        background-color: transparent;
+        color: #5c5cff;
+        border: 2px solid #5c5cff;
+  
+        &:hover {
+          background-color: #5c5cff;
+          color: white;
+        }
+      }
+    }
+  }
