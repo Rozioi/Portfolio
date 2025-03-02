@@ -1,46 +1,17 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
-
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import homeStyles from "./assets/Home.module.scss";
 import aboutStyles from "./assets/About.module.scss";
 const App: React.FC = () => {
 
-    const aboutRef = useRef<HTMLDivElement>(null);
-    const homeRef = useRef<HTMLDivElement>(null);
-    const scroll = (ref: React.RefObject<HTMLDivElement>) => {
-        if (ref?.current) {
-            ref.current.scrollIntoView({ behavior: "smooth" });
-        }
-    };
-
-    useEffect(() => {
-        const handlePopState = () => {
-            const pathname = window.location.pathname;
-            switch (pathname) {
-                case '/about':
-                    scroll(aboutRef);
-                    break;
-                case '/':
-                default:
-                    scroll(homeRef);
-                    break;
-            }
-        };
-
-        window.addEventListener('popstate', handlePopState);
-        handlePopState();
-        return () => {
-            window.removeEventListener('popstate', handlePopState);
-        };
-    }, []);
 
 
     return (
         <BrowserRouter>
             <div style={{ width: '100vw', height: '100vh' }}>
                 <Header />
-                <section className={homeStyles['section']} id="" ref={homeRef}>
+                <section className={homeStyles['section']} id="home">
                     <h4 className={homeStyles['hello-text']}>Hi! I am a Rozioi </h4>
                     <p className={homeStyles['description']}>I am a full-stack developer who likes to create thoughtful and scalable web applications. Clean code, high performance and user—friendly UI are my priorities.</p>
                     <div className={homeStyles['button-list']}>
@@ -51,7 +22,7 @@ const App: React.FC = () => {
                     </div>
 
                 </section>
-                <section className={aboutStyles['section']} id="about" ref={aboutRef}>
+                <section className={aboutStyles['section']} id="about">
                     <div className={aboutStyles['grid-container']}>
                         <div className={aboutStyles['about-me']}>
                             <h1>👨‍💻About me</h1>

@@ -1,44 +1,48 @@
 .section {
     display: flex;
     height: 100%;
-    justify-content: center; // Центрирование содержимого
-    padding: 20px; // Отступы вокруг секции
+    justify-content: center; 
+    padding: 20px; 
 }
 
 .grid-container {
     height: 80%;
-    display: grid; // Используем grid для расположения блоков
-    grid-template-columns: repeat(2, 1fr); // Два столбца
-    gap: 20px; // Расстояние между блоками
-    max-width: 1200px; // Максимальная ширина контейнера
-    width: 100%; // Ширина контейнера
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    max-width: 1200px; 
+    width: 100%; 
 }
 
 .about-me, .skills, .education, .projects {
-    border: 2px solid #161616; // Цвет границы
-    border-radius: 8px; // Закругленные углы
-    padding: 15px; // Отступы внутри блока
-    background-color: transparent; // Цвет фона блока
+    border: 2px solid #161616; 
+    border-radius: 8px; 
+    padding: 15px; 
+    background-color: transparent; 
     color: white;
+    transition: transform .3s;
     & h1{
         color: #5F3CB0;
+    }
+    &:hover{ 
+        transform: scale(1.05);
     }
 }
 
 .skills-icons {
-    display: flex; // Используем flexbox для выравнивания значков
-    flex-wrap: wrap; // Позволяем значкам переноситься на новую строку
-    gap: 10px; // Расстояние между значками
-    margin-top: 10px; // Отступ сверху
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-top: 10px; 
 }
 
 .skills-icons img {
-    width: 40px; // Ширина значка
-    height: 40px; // Высота значка
-    object-fit: contain; // Сохранение пропорций
-    transition: transform 0.3s; // Плавный переход при наведении
+    width: 40px; 
+    height: 40px; 
+    object-fit: contain; 
+    transition: transform 0.3s; 
 }
 
 .skills-icons img:hover {
-    transform: scale(1.1); // Увеличение значка при наведении
+    transform: scale(1.1); 
 }

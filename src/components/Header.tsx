@@ -1,35 +1,71 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import styles from '../assets/Header.module.scss';
 
+
+
+
 const Header: React.FC = () => {
+    const [activeLink, setActiveLink] = useState<string>("home");
+
+    const handleLinkClick = (link: string) => {
+        setActiveLink(link);
+        const targetElement = document.getElementById(link);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", `#${link}`);
+        }
+
+       
+    };
+
     return (
         <header className={styles.header}>
             <p className={styles.logo}>rozioi</p>
             <nav className={styles['link-list']}>
-                <NavLink to="/" className={({isActive}) => 
-                    isActive ? styles['active-link'] : styles.link
-                }>
+                <a
+                    href="#home"
+                    onClick={(e) => {
+                        e.preventDefault();
+                         handleLinkClick("home")
+                    }}
+                    className={activeLink === "home" ? styles['active-link'] : styles.link}
+                >
                     Home
-                </NavLink>
-                <NavLink to="/about" className={({isActive}) => 
-                    isActive ? styles['active-link'] : styles.link
-                }>
+                </a>
+                <a
+                    href="#about"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick("about");
+                        
+                    }}
+                    className={activeLink === "about" ? styles['active-link'] : styles.link}
+                >
                     About
-                </NavLink>
-                <NavLink to="/projects" className={({isActive}) => 
-                    isActive ? styles['active-link'] : styles.link
-                }>
+                </a>
+                <a
+                    href="#projects"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        handleLinkClick("projects");
+                    }}
+                    className={activeLink === "projects" ? styles['active-link'] : styles.link}
+                >
                     Projects
-                </NavLink>
-                <NavLink to="/contacts" className={({isActive}) => 
-                    isActive ? styles['active-link'] : styles.link
-                }>
+                </a>
+                <a
+                    href="#contacts"
+                    onClick={(e) => {
+                        e.preventDefault(); 
+                        handleLinkClick("contacts");
+                    }}
+                    className={activeLink === "contacts" ? styles['active-link'] : styles.link}
+                >
                     Contacts
-                </NavLink>
+                </a>
             </nav>
         </header>
-    )
+    );
 };
 
 export default Header;
