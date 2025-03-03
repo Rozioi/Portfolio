@@ -1,24 +1,41 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import homeStyles from "./assets/Home.module.scss";
 import aboutStyles from "./assets/About.module.scss";
+import contactStyles from "./assets/Contact.module.scss";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaTelegram } from "react-icons/fa";
+
+
+
 const App: React.FC = () => {
+    const [activeLink, setActiveLink] = useState<string>("home");
+
+    const handleLinkClick = (link: string) => {
+
+        setActiveLink(link);
+        const targetElement = document.getElementById(link);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", `#${link}`);
+        }
 
 
+    };
 
     return (
         <BrowserRouter>
             <div style={{ width: '100vw', height: '100vh' }}>
-                <Header />
+                <Header activeLink={activeLink} handleLinkClick={handleLinkClick} />
                 <section className={homeStyles['section']} id="home">
                     <h4 className={homeStyles['hello-text']}>Hi! I am a Rozioi </h4>
                     <p className={homeStyles['description']}>I am a full-stack developer who likes to create thoughtful and scalable web applications. Clean code, high performance and user—friendly UI are my priorities.</p>
                     <div className={homeStyles['button-list']}>
-                        <button className={homeStyles['button-fill']}>
+                        {/* <button className={homeStyles['button-fill']}>
                             Projects
-                        </button>
-                        <button className={homeStyles['button-empty']}>Contacts</button>
+                        </button> */}
+                        <button onClick={() => handleLinkClick('contacts')} className={homeStyles['button-empty']}>Contacts</button>
                     </div>
 
                 </section>
@@ -60,6 +77,40 @@ const App: React.FC = () => {
                             <p>
                                 I have worked on various projects, including web applications, mobile apps, and design prototypes. My portfolio showcases my ability to create functional and visually appealing products.
                             </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="contacts" className={contactStyles['section']}>
+                    <h2 className={contactStyles['title']}>Написать мне</h2>
+                    <p className={contactStyles['subtitle']}>
+                        Не стесняйтесь связаться со мной, если у вас есть вопросы или вы хотите обсудить возможность сотрудничества.
+                    </p>
+                    <div className={contactStyles['list-button']}>
+                        <div className={contactStyles['button-share']}>
+                            <a
+                                href="mailto:ivanzheleznuy@gmail.com?subject=Предложение сотрудничества&body=Здравствуйте, Иван!"
+                                
+                                className={contactStyles['button-link']} >
+                                    
+                                <div className={contactStyles['block-logo1']}>
+                                    <MdOutlineEmail className={contactStyles['icon']} />
+                                </div>
+                                <h1 className={contactStyles['button-title']}>Email</h1>
+                                <p className={contactStyles['button-text']}>ivanzheleznuy@gmail.com</p>
+                            </a>
+                        </div>
+                        <div className={contactStyles['button-share']}>
+                            <a
+                            href="https://t.me/rozioi"
+                            className={contactStyles['button-link']} 
+                            target="_blank"
+                            >
+                                <div className={contactStyles['block-logo2']}>
+                                    <FaTelegram className={contactStyles['icon']} />
+                                </div>
+                                <h1 className={contactStyles['button-title']}>Telegram</h1>
+                                <p className={contactStyles['button-text']}>@rozioi</p>
+                            </a>
                         </div>
                     </div>
                 </section>

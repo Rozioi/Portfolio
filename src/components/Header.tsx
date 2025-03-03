@@ -2,21 +2,14 @@ import React, { useState } from "react";
 import styles from '../assets/Header.module.scss';
 
 
+type header = {
+    activeLink: string;
+    handleLinkClick: (link:string) => void;
+}
 
 
-const Header: React.FC = () => {
-    const [activeLink, setActiveLink] = useState<string>("home");
-
-    const handleLinkClick = (link: string) => {
-        setActiveLink(link);
-        const targetElement = document.getElementById(link);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-            window.history.pushState(null, "", `#${link}`);
-        }
-
-       
-    };
+const Header: React.FC<header> = ({activeLink, handleLinkClick}) => {
+    
 
     return (
         <header className={styles.header}>
@@ -26,7 +19,7 @@ const Header: React.FC = () => {
                     href="#home"
                     onClick={(e) => {
                         e.preventDefault();
-                         handleLinkClick("home")
+                        handleLinkClick("home")
                     }}
                     className={activeLink === "home" ? styles['active-link'] : styles.link}
                 >
@@ -43,7 +36,7 @@ const Header: React.FC = () => {
                 >
                     About
                 </a>
-                <a
+                {/* <a
                     href="#projects"
                     onClick={(e) => {
                         e.preventDefault();
@@ -52,7 +45,7 @@ const Header: React.FC = () => {
                     className={activeLink === "projects" ? styles['active-link'] : styles.link}
                 >
                     Projects
-                </a>
+                </a> */}
                 <a
                     href="#contacts"
                     onClick={(e) => {

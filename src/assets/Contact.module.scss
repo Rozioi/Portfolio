@@ -1,0 +1,194 @@
+@mixin button-share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 240px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px) scale(1.05); 
+
+        .block-logo1,
+        .block-logo2 {
+            transform: scale(1.1);
+        }
+
+        .button-text {
+            color: white;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 180px; 
+        padding: 15px; 
+    }
+
+    @media (max-width: 480px) {
+        width: 140px;
+        padding: 10px;
+    }
+}
+
+@mixin block-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    margin-bottom: 15px;
+
+    & svg {
+        font-size: 35px;
+    }
+
+    transition: transform 0.3s ease;
+
+    @media (max-width: 768px) {
+        width: 50px; /* Уменьшаем размер логотипов */
+        height: 50px;
+
+        & svg {
+            font-size: 30px; /* Уменьшаем размер иконок */
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 40px;
+        height: 40px;
+
+        & svg {
+            font-size: 25px;
+        }
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #1a1a1a, #000000);
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+
+    @media (max-width: 768px) {
+        font-size: 2rem; 
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.8rem;
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 20px; 
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.9rem;
+    }
+}
+
+.list-button {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    @media (max-width: 768px) {
+        gap: 20px; 
+        flex-wrap: wrap; 
+    }
+
+    @media (max-width: 480px) {
+        gap: 10px;
+    }
+}
+
+.button-share {
+    @include button-share;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.button-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.block-logo1 {
+    @include block-logo;
+    background-color: oklch(0.511 0.262 276.966);
+}
+
+.block-logo2 {
+    @include block-logo;
+    background-color: oklch(0.546 0.245 262.881);
+}
+
+.icon {
+    color: white;
+    font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
+}
+
+.button-title {
+    margin-top: 2px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+    }
+}
+
+.button-text {
+    margin-top: 2px;
+    font-size: 1rem;
+    color: #ccc;
+    transition: color 0.3s ease;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem; 
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
+    }
+}
