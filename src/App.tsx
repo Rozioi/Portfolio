@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import homeStyles from "./assets/Home.module.scss";
@@ -12,16 +12,58 @@ import { FaTelegram } from "react-icons/fa";
 const App: React.FC = () => {
     const [activeLink, setActiveLink] = useState<string>("home");
 
-    const handleLinkClick = (link: string) => {
+    const isManualScroll = useRef(false)
 
+    const observeSections = () => {
+        const sections = document.querySelectorAll('section');
+        let activeSection: string | null = null;
+        let timeoutId: NodeJS.Timeout | undefined;
+
+        const observerOptions: IntersectionObserverInit = {
+            root: null,
+            rootMargin: "0px 0px",
+            threshold: 0.5,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            if (isManualScroll.current) return; 
+
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && entry.target.id !== activeSection) {
+                    clearTimeout(timeoutId);
+                    timeoutId = setTimeout(() => {
+                        activeSection = entry.target.id;
+                        window.history.pushState(null, "", `#${activeSection}`)
+                        setActiveLink(activeSection);
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+    };
+
+    useEffect(() => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash){handleLinkClick(hash)}
+        else{handleLinkClick('home');};
+        observeSections();
+    }, []);
+
+    const handleLinkClick = (link: string) => {
+        isManualScroll.current = true; 
         setActiveLink(link);
+
         const targetElement = document.getElementById(link);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: "smooth" });
             window.history.pushState(null, "", `#${link}`);
         }
 
-
+        
+        setTimeout(() => {
+            isManualScroll.current = false;
+        }, 1000);
     };
 
     return (
@@ -89,9 +131,9 @@ const App: React.FC = () => {
                         <div className={contactStyles['button-share']}>
                             <a
                                 href="mailto:ivanzheleznuy@gmail.com?subject=Предложение сотрудничества&body=Здравствуйте, Иван!"
-                                
+
                                 className={contactStyles['button-link']} >
-                                    
+
                                 <div className={contactStyles['block-logo1']}>
                                     <MdOutlineEmail className={contactStyles['icon']} />
                                 </div>
@@ -101,9 +143,9 @@ const App: React.FC = () => {
                         </div>
                         <div className={contactStyles['button-share']}>
                             <a
-                            href="https://t.me/rozioi"
-                            className={contactStyles['button-link']} 
-                            target="_blank"
+                                href="https://t.me/rozioi"
+                                className={contactStyles['button-link']}
+                                target="_blank"
                             >
                                 <div className={contactStyles['block-logo2']}>
                                     <FaTelegram className={contactStyles['icon']} />
