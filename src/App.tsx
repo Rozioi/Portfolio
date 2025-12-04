@@ -9,7 +9,7 @@ import Projects from "./features/Projects/Projects";
 import ProjectDetail from "./features/Projects/ProjectDetail";
 import Snowfall from "react-snowfall";
 
-const createEmojiImage = (emoji: string) => {
+const createEmojiImage = (emoji: string): HTMLCanvasElement => {
   const canvas = document.createElement("canvas");
   const size = 20;
   canvas.width = size;
@@ -31,7 +31,7 @@ const createEmojiImage = (emoji: string) => {
 };
 
 function AppContent() {
-  const [snowflakeImages, setSnowflakeImages] = useState([]);
+  const [snowflakeImages, setSnowflakeImages] = useState<HTMLCanvasElement[]>([]);
 
   useEffect(() => {
     const images = ["❄"].map(createEmojiImage);
