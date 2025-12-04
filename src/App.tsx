@@ -9,7 +9,7 @@ import Projects from "./features/Projects/Projects";
 import ProjectDetail from "./features/Projects/ProjectDetail";
 import Snowfall from "react-snowfall";
 
-const createEmojiImage = (emoji) => {
+const createEmojiImage = (emoji: string) => {
   const canvas = document.createElement("canvas");
   const size = 20;
   canvas.width = size;
