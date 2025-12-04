@@ -1,0 +1,187 @@
+.aboutSection {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7, #3b82f6, #60a5fa);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Allerta", sans-serif;
+  animation: gradientShift 4s ease infinite;
+  letter-spacing: -0.02em;
+
+  @keyframes gradientShift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
+.textContent {
+  background: linear-gradient(135deg, rgba(20, 20, 30, 0.95) 0%, rgba(15, 15, 25, 0.95) 100%);
+  padding: 4rem;
+  border-radius: 24px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(139, 92, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b5cf6, #3b82f6, transparent);
+    opacity: 0.6;
+  }
+
+  &:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(139, 92, 246, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 0 30px rgba(139, 92, 246, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+  font-family: "Allerta", sans-serif;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.skillsSection {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skillsTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: white;
+  font-family: "Allerta", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.2rem;
+  }
+}
+
+.skillItem {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+  color: #a78bfa;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Allerta", sans-serif;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25) 0%, rgba(59, 130, 246, 0.25) 100%);
+    transform: translateY(-4px) scale(1.02);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 
+      0 8px 20px rgba(139, 92, 246, 0.3),
+      0 0 15px rgba(139, 92, 246, 0.2);
+    color: #c4b5fd;
+
+    &::before {
+      left: 100%;
+    }
+  }
+}
+

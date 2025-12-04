@@ -1,0 +1,30 @@
+.snowContainer {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  z-index: 10001 !important;
+  overflow: hidden !important;
+}
+
+.snowflake {
+  position: absolute !important;
+  top: -30px;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50% !important;
+  animation: fall linear infinite !important;
+  will-change: transform;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(calc(100vh + 50px)) translateX(var(--drift, 30px)) rotate(360deg);
+    opacity: 0.2;
+  }
+}

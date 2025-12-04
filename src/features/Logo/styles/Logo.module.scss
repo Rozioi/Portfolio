@@ -1,0 +1,205 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.logo {
+    font-family: "Ultra", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    user-select: none;
+    align-self: center;
+    margin: 0;
+    position: relative;
+
+    &::after {
+        content: ".";
+        position: absolute;
+        color: #8b5cf6;
+        font-size: 20px;
+        font-family: "Wendy One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @media (max-width: 490px) {
+        margin-left: 0;
+    }
+
+    @media (max-width: 324px) {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+}
+
+// Стили для эмодзи Санты
+.santaEmoji {
+    font-size: 2.2rem;
+    animation: santaFloat 3s ease-in-out infinite;
+    display: inline-block;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    // Снежный эффект вокруг эмодзи
+    &::before {
+        content: "❄";
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.8rem;
+        opacity: 0;
+        animation: snowTwinkle 2s ease-in-out infinite;
+    }
+
+    &::after {
+        content: "✨";
+        position: absolute;
+        bottom: -10px;
+        right: -5px;
+        font-size: 0.7rem;
+        opacity: 0;
+        animation: sparkle 2s ease-in-out infinite 0.5s;
+    }
+
+    // Анимация плавающего движения
+    @keyframes santaFloat {
+        0%,
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        25% {
+            transform: translateY(-4px) rotate(-5deg);
+        }
+        75% {
+            transform: translateY(-2px) rotate(5deg);
+        }
+    }
+
+    // Анимация снежинки
+    @keyframes snowTwinkle {
+        0%,
+        100% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(0);
+        }
+        50% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(5px);
+        }
+    }
+
+    // Анимация блесток
+    @keyframes sparkle {
+        0%,
+        100% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+
+    // Эффект при наведении
+    &:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+
+        &::before,
+        &::after {
+            animation-duration: 1s;
+        }
+    }
+
+    // Новогоднее свечение
+    .holiday & {
+        animation:
+            santaFloat 2s ease-in-out infinite,
+            holidayGlow 2s ease-in-out infinite alternate;
+
+        @keyframes holidayGlow {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+            }
+            100% {
+                filter: drop-shadow(0 0 15px rgba(220, 38, 38, 0.6))
+                    drop-shadow(0 0 20px rgba(255, 255, 255, 0.4));
+            }
+        }
+    }
+
+    // Адаптация для мобильных
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+
+        &::before {
+            font-size: 0.6rem;
+            top: -12px;
+        }
+
+        &::after {
+            font-size: 0.6rem;
+            bottom: -8px;
+        }
+    }
+
+    @media (max-width: 490px) {
+        font-size: 1.6rem;
+
+        &::before {
+            display: none; // Убираем на маленьких экранах
+        }
+    }
+
+    // Для пользователей, которые предпочитают меньше анимаций
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+
+        &::before,
+        &::after {
+            animation: none;
+            opacity: 0.5;
+        }
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+// Альтернативные эмодзи (можно менять)
+.santaEmoji.alternate {
+    &::before {
+        content: "🎁";
+        animation-delay: 0.3s;
+    }
+
+    &::after {
+        content: "🌟";
+        animation-delay: 0.7s;
+    }
+}
+
+// Мигающий эффект для привлечения внимания
+@keyframes attentionPulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.hasNotification .santaEmoji {
+    animation:
+        santaFloat 3s ease-in-out infinite,
+        attentionPulse 1.5s ease-in-out infinite;
+}
